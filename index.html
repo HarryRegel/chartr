@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chartr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="topbar">
+
+    </div>
+
+    <div class="nav-container">
+        <img class="logo" src="images/HyYNu7kXqEmDEcljV3ItJYmn0.webp" alt="logo">
+        <img class="notifications" src="images/bell.png" alt="notifications">
+    </div>
+    <div class="searchbar">
+        <input type="text" class="search" placeholder="Click to book Bike / Auto">
+        <div class="idea">
+            <img class="bulb" src="images/lightbulb.png" alt="">
+            <p class="idea-content">Do you know ? You can now book auto and bike!</p>
+        </div>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14024.091781926349!2d77.21924050119777!3d28.508957367605223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1bd66a0a8dd%3A0xea7a174449a20e04!2sKhanpur%2C%20New%20Delhi%2C%20Delhi%20110062%2C%20India!5e0!3m2!1sen!2sus!4v1703264656378!5m2!1sen!2sus"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="qr">
+            <img src="images/qr-code (1).png" alt="" class="qrcode">
+            <p class="scan ">Scan QR</p>
+        </div>
+        <div class="main-boxes">
+
+            <img class="medal" src="images/gold-medal.png" alt="">
+
+            <div class="text">
+                <h3>Leaderboard</h3>
+                <p>Help other commuters and win points</p>
+            </div>
+
+            <img class="arrow" src="images/right-arrow.png" alt="">
+
+        </div>
+        <h3 class="bus">Bus</h3>
+        <div class="grid">
+            
+            <div class="elements">
+                <img class="grid-images" src="images/validating-ticket.png" alt="">
+                <p class="element_text">Buy ticket</p>
+            </div>
+            <div class="elements">
+                <img class="grid-images" src="images/history.png" alt="">
+                <p class="element_text">Past trips</p>
+            </div>
+            <div class="elements">
+                <img class="grid-images" src="images/nearest.png" alt="">
+                <p class="element_text">Nearest stop</p>
+            </div>
+            <div class="elements">
+                <img class="grid-images" src="images/upload.png" alt="">
+                <p class="element_text">Less</p>
+            </div>
+            <div class="elements">
+                <img class="grid-images" src="images/validating-ticket.png" alt="">
+                <p class="element_text">Buy daily pass</p>
+            </div>
+            <div class="elements">
+                <img class="grid-images" src="images/transaction.png" alt="">
+                <p class="element_text"> Around me</p>
+            </div>
+            <div class="elements">
+                <img class="grid-images" src="images/nearest.png" alt="">
+                <p class="element_text">Track journey</p>
+            </div>
+            <div class="elements">
+                <img class="grid-images" src="images/transaction.png" alt="">
+                <p class="element_text">Route info</p>
+            </div>
+        </div>
+
+    </div>
+    <video id="cameraFeed" width="640" height="480" autoplay></video>
+    <button onclick="startCamera()">Start Camera</button>
+    <button onclick="stopCamera()">Stop Camera</button>
+
+    <script>
+        let videoStream;
+
+        function startCamera() {
+            const videoElement = document.getElementById('cameraFeed');
+
+            // Constraints to specify video quality and other options
+            const constraints = { video: true };
+
+            // Request access to the camera
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then((stream) => {
+                    videoStream = stream;
+                    videoElement.srcObject = stream;
+                })
+                .catch((error) => {
+                    console.error('Error accessing camera:', error);
+                });
+        }
+
+        function stopCamera() {
+            if (videoStream) {
+                const tracks = videoStream.getTracks();
+                tracks.forEach(track => track.stop());
+                videoStream = null;
+                document.getElementById('cameraFeed').srcObject = null;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

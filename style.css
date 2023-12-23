@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    height: 200vh;
+    text-align: center;
+}
+
+.topbar{
+    height: 18px;
+    background-color: rgb(28, 189, 189);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo {
+    width: 120px;
+    margin: 1%;
+}
+
+.notifications {
+    width: 20px;
+    height: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    background-color: rgb(210, 241, 241);
+    padding: 5px;
+    border-radius: 20px;
+}
+.searchbar{
+    background-color: rgb(231, 231, 231);
+    height: 51vh;
+    text-align: center;
+    
+    text-align: center;
+}
+.search{
+    height: 30px;
+    width: 92%;
+    border-radius: 12px;
+    margin-top: 10px;
+    
+    
+}
+input::placeholder{
+    font-size: 18px;
+    font-weight: 600;
+}
+.idea{
+    /* margin-top: */
+    margin: 12px;
+    background-color: rgb(228, 206, 159);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.bulb{
+    margin: 8px;
+    width: 20px;
+    height: 20px;
+}
+.idea-content{
+    margin: 4px;
+    text-align: start;
+   
+}
+
+.qr{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(82, 197, 197);
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    bottom: 40%;
+    border-radius: 18px;
+}
+.qrcode{
+    color: white;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+}
+.scan{
+    margin-top: 13px;
+    color: white;
+}
+.main-boxes{
+    width: 90%;
+    margin: 15px;
+    border-radius: 12px;
+    height: 60px;
+  background-color: rgb(8, 8, 46);
+display: flex;
+justify-content: space-between;
+}
+.medal {
+    width: 30px;
+    height: 30px;
+    margin: 12px;
+}
+.text{
+    text-align: start;
+    color: white;
+    margin-top: 8px;
+}
+.text p{
+    font-size: 13px;
+}
+.arrow {
+    width: 20px;
+    height: 30px;
+    margin: 12px;
+}
+.grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid-images{
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border-radius: 28px;
+    background-color: rgb(219, 243, 243);
+}
+.elements{
+    margin: 8px;
+}
+.element_text{
+    font-size: 12px;
+    font-weight: 600;
+}
+.bus{
+    text-align: left;
+    margin-left: 12px;
+}
