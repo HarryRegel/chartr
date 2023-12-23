@@ -83,41 +83,28 @@
         </div>
 
     </div>
-    <video id="cameraFeed" width="640" height="480" autoplay></video>
-    <button onclick="startCamera()">Start Camera</button>
-    <button onclick="stopCamera()">Stop Camera</button>
-
-    <script>
-        let videoStream;
-
-        function startCamera() {
-            const videoElement = document.getElementById('cameraFeed');
-
-            // Constraints to specify video quality and other options
-            const constraints = { video: true };
-
-            // Request access to the camera
-            navigator.mediaDevices.getUserMedia(constraints)
-                .then((stream) => {
-                    videoStream = stream;
-                    videoElement.srcObject = stream;
-                })
-                .catch((error) => {
-                    console.error('Error accessing camera:', error);
-                });
-        }
-
-        function stopCamera() {
-            if (videoStream) {
-                const tracks = videoStream.getTracks();
-                tracks.forEach(track => track.stop());
-                videoStream = null;
-                document.getElementById('cameraFeed').srcObject = null;
-            }
-        }
-    </script>
+  <div class="mobilelists">
+    <div class="list">
+        <img src="images/hut.png" alt="" class="listimg">
+        <p class="active">Home</p>
+    </div>
+    <div class="list">
+        <img src="images/location.png" alt="" class="listimg">
+        <p>Nearby</p>
+    </div>
+    <div class="list">
+        <img src="images/location.png" alt="" class="listimg">
+        <p>Around me</p>
+    </div>
+    <div class="list">
+        <img src="images/avatar.png" alt="" class="listimg">
+        <p>Profile</p>
+    </div>
+  </div>  
+  
 
 
 </body>
+
 
 </html>
