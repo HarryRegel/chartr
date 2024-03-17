@@ -3,6 +3,10 @@
     margin: 0;
     
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 body{
     height: 200vh;
     text-align: center;
