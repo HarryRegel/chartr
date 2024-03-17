@@ -28,7 +28,7 @@
   }
   .ticket-section{
     height: 57vh;
-    /* max-height: fit-content; */
+    max-height: fit-content;
     margin-top: 120px;
     background-color: white;
     border-radius: 8px;
