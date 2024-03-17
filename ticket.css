@@ -27,7 +27,7 @@
     text-decoration: underline;
   }
   .ticket-section{
-    height: 50vh;
+    height: 57vh;
     margin-top: 120px;
     background-color: white;
     border-radius: 8px;
@@ -44,10 +44,84 @@
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 15px;
+    font-size: 18px;
+    /* font-family: Helvetica; */
+    /* font-weight: 100; */
   }
   .hr{
     height: 2px;
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .busroute{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+
+  }
+  .busfareroute{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    padding-top: 4px;
+    margin-bottom: 15px;
+    /* font-family: helvetica; */
+
+  }
+  .busfareroute > :nth-child(2){
+    font-weight: 600;
+    
+    /* color: red; */
+  }
+  .book{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .booking{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 19px;
+    padding-top: 4px;
+    margin-bottom: 15px;
+  }
+  .start{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .startstop{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 4px;
+    margin-bottom: 15px;
+  }
+  .hash{
+    text-align: center;
+  }
+  .qr{
+    display: flex;
+    margin: 15px;
+    gap: 15px;
+    border-radius: 10px;
+    /* height: 40px; */
+    margin-bottom: 20px;
+    border: 2px solid #009463;
+    background-color: rgb(163, 207, 163);
+    /* justify-content: space-around; */
+    padding-left: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  .qrtext{
+    color: #066847 ;
   }
